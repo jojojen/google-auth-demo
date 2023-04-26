@@ -1,0 +1,10 @@
+<!-- access-control.component.html -->
+<div class="formGroup">
+    <button *ngIf="!isLoggedIn" type="button" (click)="authService.GoogleAuth()">
+      Log in with Google
+    </button>
+    <button *ngIf="isLoggedIn" type="button" (click)="authService.SignOut()">
+      Log out
+    </button>
+    <p *ngIf="uid">User UID: {{ uid }}</p>
+</div>

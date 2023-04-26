@@ -1,3 +1,5 @@
+// app.component.ts
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'googleAuthProj';
+
+  loggedIn: boolean = false;
+
+  updateLoggedInStatus(loggedIn: boolean) {
+    this.loggedIn = loggedIn;
+  }
+
 }
